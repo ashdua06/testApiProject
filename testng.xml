@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" verbose="10" name="Test Suite" parallel="methods">
+  <listeners>
+    <listener class-name="com.test.helpers.listeners.AnnotationTransformer"/>
+  </listeners>
+  <test thread-count="1" name="Test Suite" parallel="methods">
+    <packages>
+      <package name="systemTesting.agePredictor"/>
+    </packages>
+  </test> <!-- Test Suite -->
+</suite> <!-- Test Suite -->

@@ -12,7 +12,7 @@ public class AgePredictionTest extends BaseSetup {
 
     @DataProvider
     public Object[][] agePredictorDataProvider() {
-        List<GetAgeRequestPojo> testData=getTestData("AgePredictor.xlsx","GetAge", GetAgeRequestPojo.class);
+        List<GetAgeRequestPojo> testData=getTestData("AgePredictor.xlsx","GetAgeNew", GetAgeRequestPojo.class);
         Object[][] data = new Object[testData.size()][2];
         for (int i = 0; i < testData.size(); i++) {
             data[i][0] = testData.get(i);

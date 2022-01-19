@@ -84,11 +84,16 @@ public class ExcelUtils {
             String[][] sheetDataObject = new String[rownum][colnum];
             for (int i = 0; i < rownum; i++) {
                 for (int j = 0; j < colnum; j++) {
-
                     System.out.println("row: " + rownum + "col: " + colnum);
                     //GET CELL
                     XSSFCell cell1 = ExcelWSheet.getRow(i).getCell(j);
                     //String value = df.formatCellValue(cell1);
+
+                    if(df.formatCellValue(cell1).equalsIgnoreCase("TRUE"))
+                        j++;
+                    else
+                        break;
+                    cell1 = ExcelWSheet.getRow(i).getCell(j);
                     sheetDataObject[i][j] = df.formatCellValue(cell1);
                     //testData.add(df.formatCellValue(cell1).replaceAll("\n","").replaceAll(" ",""));
                     testData.add(df.formatCellValue(cell1));
